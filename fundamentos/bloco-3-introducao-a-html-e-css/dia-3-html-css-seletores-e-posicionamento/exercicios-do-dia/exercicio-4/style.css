@@ -1,0 +1,11 @@
+ol li{
+  background-color: yellow;
+}
+
+.lista-ordenada li:nth-child(even){
+  color: green;
+}
+
+.lista-ordenada li:nth-child(odd){
+  text-transform: uppercase;
+}
