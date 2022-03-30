@@ -1,0 +1,75 @@
+body{
+  background-color: #000;
+  color: #fff;
+  margin-top: 6rem;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+a{
+  text-decoration: none;
+  color: #aaa;
+}
+
+h1{
+  color:#F82C4D;
+  font-family: fantasy;
+  font-size: 50px;
+}
+
+h1, h2, a, p, ul{
+  font-family: sans-serif;
+}
+
+#nome{
+  font-family: fantasy;
+}
+
+p{
+  line-height: 25px;
+  font-size:20px
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+li{
+  margin-top: 20px;
+}
+
+#perfil_inf{
+  display: flex;
+  max-width: 1120px;
+}
+
+#description{
+  margin-left: 100px;
+  width: 400px;
+}
+
+#desc{
+  line-height: 35px;
+  font-size: 23px;
+}
+
+.tryber{
+  font-size: 33px;
+}
+
+.desenho{
+  font-size: 29px;
+}
+
+.karate{
+  font-size: 25px;
+}
+
+li{
+  font-size: 20px;
+}
+
