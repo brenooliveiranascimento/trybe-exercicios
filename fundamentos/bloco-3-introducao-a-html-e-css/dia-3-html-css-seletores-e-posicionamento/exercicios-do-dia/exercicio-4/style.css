@@ -9,3 +9,44 @@ ol li{
 .lista-ordenada li:nth-child(odd){
   text-transform: uppercase;
 }
+
+.red-font{
+  color: red;
+}
+
+italic-font{
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+li:nth-child(-n + 3){
+  color: blue;
+}
+
+.java{
+  background-color: pink;
+}
+
+.hover-mouse:hover{
+  font-weight: bold;
+}
+
+.stack:hover{
+  color: orange;
+}
+
+.w3:hover{
+  color: green;
+}
+
+.stack:hover{
+  color: black;
+}
+
+.dev:hover{
+  color: yellow;
+}
+
+.trybe:hover{
+  color: green;
+}
