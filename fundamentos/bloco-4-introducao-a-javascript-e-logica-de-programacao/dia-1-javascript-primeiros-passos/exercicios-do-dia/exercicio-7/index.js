@@ -1,4 +1,4 @@
-const porcentagem = 98;
+const porcentagem = 100;
 
 if(porcentagem > 100 || porcentagem < 0){
   console.error("A nota deve ser menor que 100 e maior que 0")
