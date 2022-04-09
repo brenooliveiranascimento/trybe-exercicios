@@ -62,8 +62,8 @@
       let createMainBody = document.createElement("main");
       documentBody[0].appendChild(createH1Body).innerText = "Exercício 5.2 - JavaScript DOM";
       documentBody[0].append(createMainBody);
-      createMainBody.className = "main-contain";
-      let getMain = document.querySelector(".main-contain");
+      createMainBody.className = "main-content";
+      let getMain = document.querySelector(".main-content");
       let createSectionMain = document.createElement("section");
       getMain.appendChild(createSectionMain);
       createSectionMain.className = "center-content";
@@ -101,6 +101,8 @@
         createH3.className = "description"
         getMain.appendChild(createH3).innerText = i
       }
+
+      getH1[0].className = ".center-content"
 
       let getH1 = document.getElementsByTagName("h1");
 
