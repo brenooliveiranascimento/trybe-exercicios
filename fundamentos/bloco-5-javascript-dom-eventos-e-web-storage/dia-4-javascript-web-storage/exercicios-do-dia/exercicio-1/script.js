@@ -21,7 +21,7 @@ function lodStyle() {
 lodStyle()
 
 
-let buttons = ["mudar lineHeight", "mudar cor", "mudar fontFamily", "mudar backgroundColor", "mudar fontSize"];
+let buttons = ["mudar lineHeight", "mudar cor", "mudar fontFamily", "backgroundColor", "mudar fontSize"];
 for ( let value of buttons ) {
   let btn = document.createElement("button");
   getBtnArea.appendChild(btn).innerText = value
@@ -110,7 +110,7 @@ function changeSelectorType( selected ) {
         createButton.innerHTML = value
       }
       break;
-    case "mudar backgroundColor" :
+    case "backgroundColor" :
       getChangeArea.appendChild(createInputBackgroundColor).id = "getColorBack"
       createInputBackgroundColor.style.borderRadius = "10px"
       createInputBackgroundColor.style.padding = "2px"
@@ -134,7 +134,7 @@ function changeLineHeight(event) {
   let getInput = document.querySelector("#change-params h2");
   let getText = document.querySelector(".texto");
   if ( event.target.innerText === "+" ) {
-    config.lineHeight = config.lineHeight +1
+    config.lineHeight = config.lineHeight + 1
     getText.style.lineHeight = config.lineHeight
     getInput.innerText = config.lineHeight
     localStorage.setItem("style-params", JSON.stringify(config))
