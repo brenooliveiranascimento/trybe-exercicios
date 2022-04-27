@@ -5,8 +5,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+<header class="cabess">
+  <h1 class="title">
+    Praticando forms!
+  </h1>
+</header>
+<main class="container">
+  <section class="content-container">
+    <form method="post" >
+      <label>
+        name
+        <input type="text" name="name" id="name" minlength="10" maxlength="40" >
+      </label>
+      <label>
+        email
+        <input type="text" name="email" id="email" minlength="10" maxlength="40">
+      </label>
+      <section>
+        <h3>Destino preferido</h3>
+        <label for="cidade"> cidade<input id="cidade" type="radio" value="" name="cidade"></label>
+        <label for="campo"> campo<input id="campo" type="radio" value="" name="campo"></label>
+        <label for="praia"> praia<input id="praia" type="radio" value="" name="praia"></label>
+        <label for="montanhas"> montanhas<input id="montanhas" type="radio" value="" name="montanhas"></label>
+      </section>
+      <section>
+        <h3>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h3>
+        <textarea maxlength="500"></textarea>
+      </section>
+      <input type="date" name="date" id="date">
+      <br>
+      <label>Gostaria de receber outras incríveis oportunidades oferecidas pela TrybeTrip?
+        <input type="checkbox">
+      </label>
+      <br>
+      <label>
+      Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros
+      <input type="checkbox">
+      </label>      
+
+      <button id="enviar" class="enviar" type="submit">
+        Enviar
+      </button>
+      
+      <button id="limpar" class="limpar" type="submit">
+        limpar
+      </button>
+
+    </form>
+  </section>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
