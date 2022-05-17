@@ -60,12 +60,14 @@ const books = [
     releaseYear: 1928,
   },
 ];
-
+//1
 function formatedBookNames() {
   return books.map(value => [`${value.name} - ${value.genre} - ${value.author.name}`])
 }
 console.log(formatedBookNames())
 
+
+//2
 function nameAndAge() {
   return books.map(value => (
     {age:value.releaseYear - value.author.birthYear, author:value.author.name}
@@ -74,12 +76,14 @@ function nameAndAge() {
 console.log(nameAndAge())
 
 
+//3
 function fantasyOrScienceFiction() {
   return books.filter(value => value.genre === 'Fantasia' || value.genre === 'Ficção Científica')
 }
 console.log(fantasyOrScienceFiction());
 
 
+//4
 function oldBooksOrdered() {
   const currentYear = new Date().getFullYear();
   return books.filter(value => value.releaseYear < currentYear - 60).sort((v1, v2) => v1.releaseYear - v2.releaseYear);
@@ -87,9 +91,18 @@ function oldBooksOrdered() {
 console.log(oldBooksOrdered())
 
 
+//5
 function fantasyOrScienceFictionAuthors() {
   const arrayFiltrada = books.filter(value => value.genre === 'Fantasia' || value.genre === 'Ficção Científica');
   return arrayFiltrada.map(value => `${value.author.name}`).sort()
 }
 console.log(fantasyOrScienceFictionAuthors());
 
+
+//6
+function oldBooks() {
+  const currentYear = new Date().getFullYear();
+  const arrayFiltrada = books.filter(value => value.releaseYear < currentYear - 60);
+  return arrayFiltrada.map(value => `${value.name}`)
+}
+console.log(oldBooks());
