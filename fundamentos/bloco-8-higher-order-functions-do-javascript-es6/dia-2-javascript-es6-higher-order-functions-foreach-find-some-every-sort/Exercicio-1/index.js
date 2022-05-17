@@ -94,3 +94,14 @@ function booksOrderedByReleaseYearDesc() {
 }
 
 console.log(booksOrderedByReleaseYearDesc());
+
+function everyoneWasBornOnSecXX() {
+  return books.every(value => value.author.birthYear > 1900 && value.author.birthYear <= 2000 )
+};
+
+console.log(everyoneWasBornOnSecXX())
+
+const someBookWasReleaseOnThe80s = () => books.some(value => value.releaseYear >= 1980 && value.releaseYear <= 1989 )
+
+console.log(someBookWasReleaseOnThe80s())
+
