@@ -64,7 +64,7 @@ const books = [
 // Adicione o código do exercício aqui:
 
 function formatedBookNames() {
-  return books.map(value => [`${value.name} - ${value.genre} - ${value.author}`])
+  return books.map(value => [`${value.name} - ${value.genre} - ${value.author.name}`])
 }
 console.log(formatedBookNames())
 
@@ -75,3 +75,8 @@ function nameAndAge() {
 }
 console.log(nameAndAge())
 
+
+function fantasyOrScienceFiction() {
+  return books.filter(value => value.genre === 'Fantasia' || value.genre === 'Ficção Científica')
+}
+console.log(fantasyOrScienceFiction());
