@@ -80,3 +80,17 @@ function smallerName() {
   return nameBook;
 }
 console.log(smallerName())
+
+function getNamedBook() {
+  return books.find(value => {
+    return value.name.length === 26
+  })
+}
+console.log(getNamedBook());
+
+
+function booksOrderedByReleaseYearDesc() {
+  return books.sort((a, b) => b.releaseYear - a.releaseYear);
+}
+
+console.log(booksOrderedByReleaseYearDesc());
