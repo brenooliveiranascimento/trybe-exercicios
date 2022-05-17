@@ -106,3 +106,14 @@ function oldBooks() {
   return arrayFiltrada.map(value => `${value.name}`)
 }
 console.log(oldBooks());
+
+
+//7
+
+function authorWith3DotsOnName() {
+  return books.filter(value => (
+    value.author.name[1] === '.' && value.author.name[4] === '.' && value.author.name[7] === '.'
+  ))[0].name;
+}
+console.log(authorWith3DotsOnName())
+
