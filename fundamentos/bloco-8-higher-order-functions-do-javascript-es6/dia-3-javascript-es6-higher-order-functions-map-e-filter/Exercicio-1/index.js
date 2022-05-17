@@ -61,8 +61,6 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
-
 function formatedBookNames() {
   return books.map(value => [`${value.name} - ${value.genre} - ${value.author.name}`])
 }
@@ -80,3 +78,11 @@ function fantasyOrScienceFiction() {
   return books.filter(value => value.genre === 'Fantasia' || value.genre === 'Ficção Científica')
 }
 console.log(fantasyOrScienceFiction());
+
+
+function oldBooksOrdered() {
+  const currentYear = new Date().getFullYear();
+  return books.filter(value => value.releaseYear < currentYear - 60).sort((v1, v2) => v1.releaseYear - v2.releaseYear);
+}
+console.log(oldBooksOrdered())
+
