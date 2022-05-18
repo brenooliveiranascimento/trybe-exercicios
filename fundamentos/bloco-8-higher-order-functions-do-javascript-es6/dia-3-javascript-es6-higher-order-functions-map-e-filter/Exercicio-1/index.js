@@ -109,7 +109,6 @@ console.log(oldBooks());
 
 
 //7
-
 function authorWith3DotsOnName() {
   return books.filter(value => (
     value.author.name[1] === '.' && value.author.name[4] === '.' && value.author.name[7] === '.'
