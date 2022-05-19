@@ -32,3 +32,9 @@ const expected = [
   { name: 'Miguel', average: 9.2 },
   { name: 'Maria Clara', average: 8.8 },
 ];
+
+
+
+const multiply = (number = 1, value = 1) => number * value
+
+console.log(multiply(8));
