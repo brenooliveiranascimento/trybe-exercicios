@@ -19,6 +19,7 @@
   "homepage": "https://github.com/brenooliveiranascimento/trybe-exercicios#readme",
   "dependencies": {
     "@types/jest": "^27.5.1",
-    "jest": "^28.1.0"
+    "jest": "^28.1.0",
+    "node-fetch": "^2.6.7"
   }
 }
