@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 // apiScript.js
 const API_URL = 'https://icanhazdadjoke.com/';
 
