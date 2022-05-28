@@ -28,13 +28,23 @@ getBtn.addEventListener('click', findCrypto);
 
 
 const injetCryptos = (moeda) => {
-  moeda.data.map((coin) => {
-    const number = coin.supply
-    const newCoin = document.createElement('li');
-    newCoin.className = coin.id;
-    newCoin.innerText = `${coin.name}: ${number}`
-    getUl.appendChild(newCoin);
-  });
+  // moeda.data.map((coin) => {
+  //   const number = coin.supply
+  //   const newCoin = document.createElement('li');
+  //   newCoin.className = coin.id;
+  //   newCoin.innerText = `${coin.name}: ${number}`
+  //   getUl.appendChild(newCoin);
+  // });
+
+  const tenFirstCoins = moeda.data.filter((moedas, index) => index < 10);
+  console.log(tenFirstCoins);
+    tenFirstCoins.map((coin) => {
+      const number = coin.supply
+      const newCoin = document.createElement('li');
+      newCoin.className = coin.id;
+      newCoin.innerText = `${coin.name}: ${number}`
+      getUl.appendChild(newCoin);
+    });
 };
 
 const fetchCoinsPrice = async () => {
