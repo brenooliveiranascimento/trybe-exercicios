@@ -1,0 +1,8 @@
+.divContent {
+  background-color: blue;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 30px;
+}
