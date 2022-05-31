@@ -26,7 +26,6 @@ class Content extends React.Component{
     ];
     return (
       <>
-        <h3>Conteudo</h3>
         {conteudos.map((conteudo) => (
           <div className="divContent" id={conteudo.bloco}>
           <p><strong>O conteúdo é:</strong> {conteudo.conteudo}</p>
