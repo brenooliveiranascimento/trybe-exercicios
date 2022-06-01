@@ -1,0 +1,16 @@
+.poke-card {
+  width: auto;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px 90px;
+  display: flex;
+}
+
+.poke-inf {
+  display: flex;
+  flex-direction: column;
+}
+
+.poke-inf p {
+  margin-top: 5px;
+}
