@@ -1,0 +1,21 @@
+.divContent {
+  background-color: blue;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.conteudoArea {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

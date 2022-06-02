@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let documentBody = document.getElementsByTagName("body");
+      let createH1Body = document.createElement("h1");
+      let createMainBody = document.createElement("main");
+      documentBody[0].appendChild(createH1Body).innerText = "Exercício 5.2 - JavaScript DOM";
+      documentBody[0].append(createMainBody);
+      createMainBody.className = "main-content";
+      let getMain = document.querySelector(".main-content");
+      let createSectionMain = document.createElement("section");
+      getMain.appendChild(createSectionMain);
+      createSectionMain.className = "center-content";
+      let getSection = document.getElementsByTagName("main");
+      let createP = document.createElement("p");
+      getSection[0].appendChild(createP).innerText = "Tatakae";
+      let createSecondSection = document.createElement("section");
+      getMain.append(createSecondSection);
+      createSecondSection.className = "left-content";
+      let createTirdSection = document.createElement("section");
+      getMain.appendChild(createTirdSection);
+      createTirdSection.className = "right-content";
+      let getLeftSection = document.getElementsByClassName("left-content");
+      let createImage = document.createElement("img")
+      getLeftSection[0].appendChild(createImage).src = "https://picsum.photos/200"
+      createImage.className = "small-image"
+
+      let getRight = document.getElementsByClassName("right-content");
+      let createList = document.createElement("ul");
+      createList.className = "numbers-list";
+      getRight[0].appendChild(createList)
+
+      let numbers = ['um', 'dois' , 'trs', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      for ( let i = 0; i < numbers.length; i += 1 ) {
+        let addListItems = document.createElement("li");
+        let nowNumber = numbers[i];
+        addListItems.innerText = nowNumber
+        document.getElementsByClassName("numbers-list")[0].appendChild(addListItems)
+      }
+
+      
+      for ( let i = 1; i <= 3; i += 1 ) {
+        let createH3 = document.createElement("h3");
+        createH3.className = "description"
+        getMain.appendChild(createH3).innerText = i
+      }
+
+      let getH1 = document.getElementsByTagName("h1");
+      getH1[0].innerText = "Hora de estudar sobre dom"
+
+      getMain.removeChild(getLeftSection[0])
+    </script>
+  </body>
+</html>

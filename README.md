@@ -30,51 +30,53 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 4: IntroduÃ§Ã£o - JavaScript
 
 - [x] 4-1: _JavaScript - Primeiros passos_
-- [ ] 4-2: _JavaScript - Array e loop For_
-- [ ] 4-3: _JavaScript - LÃ³gica de ProgramaÃ§Ã£o e Algoritmos_
-- [ ] 4-4: _JavaScript - Objetos e funÃ§Ãµes_
-- [ ] 4-5: _[Projeto - Playground Functions]()_
+- [x] 4-2: _JavaScript - Array e loop For_
+- [x] 4-3: _JavaScript - LÃ³gica de ProgramaÃ§Ã£o e Algoritmos_
+- [x] 4-4: _JavaScript - Objetos e funÃ§Ãµes_
+- [x] 4-5: _[Projeto - Playground Functions]()_
 
 ##### Bloco 5: IntroduÃ§Ã£o - JavaScript - Projetos
 
-- [ ] 5-1: _JavaScript - DOM e seletores_
-- [ ] 5-2: _JavaScript - Trabalhando com elementos_
-- [ ] 5-3: _JavaScript - Eventos_
-- [ ] 5-4: _JavaScript - Web Storage_
-- [ ] 5-5: _[Projeto - Meme Generator]()_
-- [ ] 5-6: _[Projeto - Arte com Pixels]()_
-- [ ] 5-7: _[Projeto - Lista de tarefas]()_
-- [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
-- [ ] 5-7: _[Projeto - Carta Misteriosa]()_
+- [x] 5-1: _JavaScript - DOM e seletores_
+- [x] 5-2: _JavaScript - Trabalhando com elementos_
+- [x] 5-3: _JavaScript - Eventos_
+- [x] 5-4: _JavaScript - Web Storage_
+- [x] 5-5: _[Projeto - Meme Generator]()_
+- [x] 5-6: _[Projeto - Arte com Pixels]()_
+- [x] 5-7: _[Projeto - Lista de tarefas]()_
+- [x] 5-7: _[Projeto - Adivinhe a Cor]()_
+- [x] 5-7: _[Projeto - Carta Misteriosa]()_
 
 ##### Bloco 6: HTML & CSS avanÃ§ado
 
-- [ ] 6-1: _HTML & CSS - Forms_
-- [ ] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
-- [ ] 6-3: _CSS Flexbox - Part 1_
-- [ ] 6-4: _CSS Flexbox - Part 2_
-- [ ] 6-5: _CSS Responsivo - Mobile First_
-- [ ] 6-6: _[Projeto - PÃ¡gina inicial do Facebook]()_
+- [x] 6-1: _HTML & CSS - Forms_
+- [x] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
+- [x] 6-3: _CSS Flexbox - Part 1_
+- [x] 6-4: _CSS Flexbox - Part 2_
+- [x] 6-5: _CSS Responsivo - Mobile First_
+- [x] 6-6: _[Projeto - PÃ¡gina inicial do Facebook]()_
 
 ##### Bloco 7: JavaScript ES6 & Testes UnitÃ¡rios
 
-- [ ] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
-- [ ] 7-2: _JavaScript ES6 - Objects_
-- [ ] 7-3: _Testes unitÃ¡rios em JavaScript_
-- [ ] 7-4: _[Projeto - JavaScript Testes UnitÃ¡rios]()_
+- [x] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
+- [x] 7-2: _JavaScript ES6 - Objects_
+- [x] 7-3: _Testes unitÃ¡rios em JavaScript_
+- [x] 7-4: _[Projeto - JavaScript Testes UnitÃ¡rios]()_
 
 ##### Bloco 8: JavaScript ES6
 
-- [ ] 8-1: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
-- [ ] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
-- [ ] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
-- [ ] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
-- [ ] 8-5: _[Projeto - Zoo functions]()_
+- [x] 8-1: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
+- [x] 8-2: _JavaScript ES6 - Higher Order Functions - map e filter_
+- [x] 8-3: _JavaScript ES6 - Higher Order Functions - reduce_
+- [x] 8-4: _JavaScript ES6 - spread operator, rest parameter, destructuring e mais_
+- [x] 8-5: _[Projeto - Zoo functions]()_
+
+## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 9: Assincronicidade & Callbacks
 
-- [ ] 9-1: _JavaScript AssÃ­ncrono e Callbacks_
-- [ ] 9-2: _JavaScript Promises_
+- [x] 9-1: _JavaScript AssÃ­ncrono e Callbacks_
+- [x] 9-2: _JavaScript Promises_
 - [ ] 9-3: _[Projeto - Carrinho de Compras]()_
 
 ##### Bloco 10: Jest
@@ -83,8 +85,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 10-2: _Jest - Testes AssÃ­ncronos_
 - [ ] 10-3: _Jest - Simulando comportamentos_
 - [ ] 10-4: _[Projeto - Jest AssÃ­ncrono e Mocking]()_
-
-## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 11: IntroduÃ§Ã£o - React
 
