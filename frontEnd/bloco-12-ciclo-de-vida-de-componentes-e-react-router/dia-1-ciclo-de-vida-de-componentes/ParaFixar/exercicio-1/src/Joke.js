@@ -17,9 +17,8 @@ class Jokes extends React.Component {
     this.deletAJoke = this.deletAJoke.bind(this);
   }
 
-  async saveJoke() {
-    await localStorage.setItem("itemList", JSON.stringify(this.state.storedJokes))
-    console.log('salvou')
+  saveJoke() {
+    localStorage.setItem("itemList", JSON.stringify(this.state.storedJokes))
   }
 
     async fetchJoke()  {
@@ -51,26 +50,24 @@ class Jokes extends React.Component {
     const requestHeaders = { headers: { Accept: 'application/json' } }
     const requestJoke = await fetch('https://icanhazdadjoke.com/', requestHeaders);
     const jokeObj = await requestJoke.json();
-    const cloneNowState = this.state.storedJokes;
-    cloneNowState.push(jokeObj);
-    this.setState({
-      storedJokes: cloneNowState,
-    })
-    this.setState({
-      loading:false
-    })
-    this.saveJoke();
+    
+    this.setState(({ storedJokes }) => ({
+      storedJokes: [...storedJokes, jokeObj],
+      loading: false
+    }));
+  }
+
+  componentDidUpdate() {
+    this.saveJoke()
   }
 
   clearJokes() {
     this.setState({
       storedJokes: []
     })
-    this.saveJoke();
   }
 
   deletAJoke(event) {
-    console.log(this.state.storedJokes);
     const item = event.target.innerText
     if(this.state.storedJokes.length === 1) {
       this.setState({
