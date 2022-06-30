@@ -35,7 +35,6 @@ class UserPainel extends React.Component {
       addressType: data.addressType,
       resume: data.resume,
     }))
-    event.preventDefault();
   }
 
   render() {
