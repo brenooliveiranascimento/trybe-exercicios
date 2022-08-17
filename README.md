@@ -103,7 +103,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 13-1: _Melhorando o reuso de componentes: props.children e PropTypes_
 - [x] 13-2: _Ciclo de vida de componentes em React_
 - [x] 13-3: _React Router_
-- [ ] 13-4: _[Projeto - Movie Cards Library CRUD]()_
+- [x] 13-4: _[Projeto - Movie Cards Library CRUD]()_
 
 ##### Bloco 14: Metodologias Ãgeis
 
@@ -122,19 +122,19 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 16-2: _React com Redux - Parte 1_
 - [x] 16-3: _React com Redux - PrÃ¡tica_
 - [x] 16-4: _React com Redux - Parte 2_
-- [ ] 16-5: _Testes sÃ­ncronos com React-Redux_
-- [ ] 16-6: _[Projeto - Tabela com filtros de dados]()_
+- [x] 16-5: _Testes sÃ­ncronos com React-Redux_
+- [x] 16-6: _[Projeto - Tabela com filtros de dados]()_
 
 ##### Bloco 17: Projeto React
 
-- [ ] 17-1: _[Projeto - Jogo de Trivia]()_
+- [x] 17-1: _[Projeto - Jogo de Trivia]()_
 
 ##### Bloco 18: React & Context API
 
-- [ ] 18-1: _Context API do React_
-- [ ] 18-2: _React Hooks - useState e useContext_
-- [ ] 18-3: _React Hooks - useEffect e Hooks customizados_
-- [ ] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [x] 18-1: _Context API do React_
+- [x] 18-2: _React Hooks - useState e useContext_
+- [x] 18-3: _React Hooks - useEffect e Hooks customizados_
+- [x] 18-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
 
 ##### Bloco 19: Projeto Final de Front-end
 
