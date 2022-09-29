@@ -54,4 +54,14 @@ app.put('/teams/:id', (req, res) => {
   res.status(202).json({ updateTeam });
 });
 
+app.delete('/teams/:id', (req, res) => {
+  const { id } = req.params;
+  const deleteItem = teams.filter((team) => team.id !== Number(id));
+
+  // const teamIndex = teams.findIndex((team) => team.id === Number(id));
+  // teams.splice(teamIndex, 1);
+
+  res.status(203).json(deleteItem).end();
+});
+
 module.exports = app;
