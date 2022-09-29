@@ -42,13 +42,16 @@ app.post('/teams', (req, res) => {
   res.status(201).json({ team: teams });
 });
 
-app.put('/teams', (req, res) => {
-  const { id } = req.body;
+app.put('/teams/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, initials } = req.body;
+
   const indexOfTeam = teams.findIndex((team) => team.id === Number(id));
   const updateTeam = { ...teams };
-  updateTeam[indexOfTeam] = req.body;
+  updateTeam[indexOfTeam].name = name;
+  updateTeam[indexOfTeam].initials = initials;
 
-  res.status(202).json(updateTeam);
+  res.status(202).json({ updateTeam });
 });
 
 module.exports = app;
