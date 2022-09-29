@@ -1,4 +1,3 @@
-const { json } = require('express');
 const express = require('express');
 
 const app = express();
@@ -34,6 +33,22 @@ const teams = [
   },
 ];
 
-app.get('/teams', (req, res) => res.status(200).json({ teams }));
+app.get('/teams', (req, res) => res.status(200).json({ team: teams }));
+
+app.post('/teams', (req, res) => {
+  const newTeam = { ...req.body };
+  teams.push(newTeam);
+
+  res.status(201).json({ team: teams });
+});
+
+app.put('/teams', (req, res) => {
+  const { id } = req.body;
+  const indexOfTeam = teams.findIndex((team) => team.id === Number(id));
+  const updateTeam = { ...teams };
+  updateTeam[indexOfTeam] = req.body;
+
+  res.status(202).json(updateTeam);
+});
 
 module.exports = app;
