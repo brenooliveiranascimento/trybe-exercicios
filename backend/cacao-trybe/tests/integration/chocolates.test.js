@@ -105,3 +105,14 @@ describe('Usando o método GET em /chocolates/brand/:brandId para buscar brandId
       ])
   });
 });
+
+describe('Usando GET em /chocolates/total', () => {
+  it('Saber a quantidade total de chocolates', async () => {
+    const response = chai
+      .request(app)
+      .get('/chocolates/total')
+
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.be.equal(4)
+  })
+})
