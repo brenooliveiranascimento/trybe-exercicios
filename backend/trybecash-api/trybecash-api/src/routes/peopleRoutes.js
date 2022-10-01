@@ -45,6 +45,7 @@ router.put('/:id', async (req, res) => {
   const person = req.body;
   try {
     const [result] = await peopleDB.editById(person, id);
+    console.log(result);
     if(result.affectedRows > 0) {
       return  res.status(200).json({ message: 'Pessoa de id 1 atualizada com sucesso' })
     }
@@ -57,7 +58,7 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
-  try { 
+  try {
     const [result] = await peopleDB.deletePerson(id);
     if(result.affectedRows > 0) {
       res.status(200).json({ message: 'Pessoa de id 1 excluída com sucesso' })
