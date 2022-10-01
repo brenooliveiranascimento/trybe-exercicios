@@ -11,15 +11,12 @@ const findAll = () => conn.execute('SELECT * FROM people');
 const findById = (id) => conn.execute('SELECT * FROM people WHERE id = ?', [id]);
 
 const editById = (person, id) => conn.execute(
-  `UPDATE people SET first_name = ?, last_name = ?, email = ?, phone: ?
-    WHERE id = ?`,
+  `UPDATE people
+    SET first_name = ?, last_name = ?, email = ?, phone = ? WHERE id = ?`,
     [person.firstName, person.lastName, person.email, person.phone, id]
 )
 
-const deletePerson = (id) => conn.execute(
-  `DELETE FROM person WHERE id = ?`,
-  [id]
-)
+const deletePerson = (id) => conn.execute(`DELETE FROM people WHERE id = ?`,[id])
 
 module.exports = {
   insert,
@@ -28,3 +25,4 @@ module.exports = {
   editById,
   deletePerson
 };
+
