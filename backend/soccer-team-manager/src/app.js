@@ -3,23 +3,6 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-// app.get('/tatakae', (req, res) => res.status(200).json({ tatakae: 'Tatakaeson!' }));
-
-// app.get('/search', (req, res) => {
-//   const { name, idade } = req.query;
-//   res.status(200).send(`Recebi o nome ${name} e a idade ${idade}`);
-// });
-
-// app.post('/user/:id', (req, res) => {
-//   const { id } = req.params;
-//   res.status(200).send(`O indentificador informado possui o valor ${id}`);
-// });
-
-// app.get('/data', (req, res) => {
-//   const user = req.body;
-//   res.status(200).send(`O nome é ${user.name} e a idade é ${user.idade}`);
-// });
-
 const teams = [
   {
     id: 1,
@@ -33,6 +16,15 @@ const teams = [
   },
 ];
 
+const verifyId = (req, res, next) => {
+  const { id } = req.params;
+  if (teams.some((team) => team.id === Number(id))) {
+    next();
+  } else {
+    res.status(400).json({ message: 'time não encontrado' });
+  }
+};
+
 app.get('/teams', (req, res) => res.status(200).json({ team: teams }));
 
 app.post('/teams', (req, res) => {
@@ -42,7 +34,7 @@ app.post('/teams', (req, res) => {
   res.status(201).json({ team: teams });
 });
 
-app.put('/teams/:id', (req, res) => {
+app.put('/teams/:id', verifyId, (req, res) => {
   const { id } = req.params;
   const { name, initials } = req.body;
 
@@ -57,10 +49,6 @@ app.put('/teams/:id', (req, res) => {
 app.delete('/teams/:id', (req, res) => {
   const { id } = req.params;
   const deleteItem = teams.filter((team) => team.id !== Number(id));
-
-  // const teamIndex = teams.findIndex((team) => team.id === Number(id));
-  // teams.splice(teamIndex, 1);
-
   res.status(203).json(deleteItem).end();
 });
 
