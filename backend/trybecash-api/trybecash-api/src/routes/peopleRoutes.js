@@ -30,7 +30,7 @@ router.get('/:id', async (req, res) => {
     const { id } = req.params;
     const [[result]] = await peopleDB.findById(id);
     if (result) {
-      res.status(200).json(result);
+      return res.status(200).json(result);
     } else {
       res.status(404).json({ message: 'Pessoa não encontrada' });
     }
@@ -40,5 +40,34 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  const { id } = req.params;
+  const person = req.body;
+  try {
+    const [result] = await peopleDB.editById(person, id);
+    if(result.affectedRows > 0) {
+      return  res.status(200).json({ message: 'Pessoa de id 1 atualizada com sucesso' })
+    }
+    res.status(404).json({ message: 'Pessoa não encontrada, por favor, inserir dados válidos' });
+  } catch(error) {
+    console.log(error);
+    res.status(500).json({ message: 'Erro ao atualizar os dados do usuário' })
+  }
+})
+
+router.delete('/:id', async (req, res) => {
+  const { id } = req.params;
+  try { 
+    const [result] = await peopleDB.deletePerson(id);
+    if(result.affectedRows > 0) {
+      res.status(200).json({ message: 'Pessoa de id 1 excluída com sucesso' })
+    } else {
+      res.status(404).json({ message: 'Usuário não encontrado, por favor, inserir dados válidos' })
+    };
+  } catch(error) {
+    console.log(error);
+    res.status(500).json({ message: 'Falha ao deletar os dados!, tente novamente' })
+  }
+})
 
 module.exports = router;
