@@ -72,7 +72,7 @@ describe('Testando os endpoint de people', function() {
       .request(app)
       .put('/people/:1')
       .send({
-          firstName: 'Lusão',
+          firstName: 'Lukão',
           lastName: 'Andarilho dos ceus',
           email: 'lukão.skywalker@trybe.com',
           phone: '851 678 4453',

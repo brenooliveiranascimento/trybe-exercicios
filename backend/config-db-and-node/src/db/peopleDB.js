@@ -10,6 +10,12 @@ const getPeoplesList = () => conn.execute(`SELECT * FROM people`)
 
 const findPeopleById = (id) => conn.execute(`SELECT * FROM people WHERE id = ?`, [id]);
 
+const editPeople = (id, person) => conn.execute(
+  `UPDATE people SET first_name = ?, last_name = ?, email = ?, phone = ?
+    WHERE id = ?`,
+  [person.firstName, person.lastName, person.email, person.phone, id]
+)
+
 module.exports = {
   insert,
   findPeopleById,

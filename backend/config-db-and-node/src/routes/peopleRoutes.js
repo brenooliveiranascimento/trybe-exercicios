@@ -32,9 +32,21 @@ router.get('/:id', async(req, res) => {
     } else {
       res.status(404).json({ message: 'Pessoa não encontrada!' });
     }
-  }catch(errpr) {
-    console.log(errpr);
+  }catch(error) {
+    console.log(error);
     res.status(500).json({ message: error.sqlMessage });
+  }
+})
+
+router.put('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const person = req.body
+    const [result] = await peopleDB.editPeople(id);
+    res.status(200).json(result);
+  } catch(error) {
+    console.log(error);
+    res.status(500).json({ message: 'Erro ao atualizar o uruário' })
   }
 })
 
