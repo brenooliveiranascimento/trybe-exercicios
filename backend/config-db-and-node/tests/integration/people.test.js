@@ -65,5 +65,22 @@ describe('Testando os endpoint de people', function() {
       expect(response.body).to.deep.equal(peopleList[0]);
   })
 
+  it('Testando a alteração de uma pessoa com base no id', async function() {
+    sinon.stub(connection, 'execute').resolves([{ affectedRows:1 }]);
+
+    const response = await chai
+      .request(app)
+      .put('/people/:1')
+      .send({
+          firstName: 'Lusão',
+          lastName: 'Andarilho dos ceus',
+          email: 'lukão.skywalker@trybe.com',
+          phone: '851 678 4453',
+      })
+
+      expect(response.status).to.be.equal(200)
+      expect(response.body).to.deep.equal({ message: 'Pessoa alterada com sucesso!!' })
+  })
+
   afterEach(sinon.restore);
 })
