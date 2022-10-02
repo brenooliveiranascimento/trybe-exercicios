@@ -13,12 +13,13 @@ router.post('/', async (req, res) => {
   }
 })
 
-router.get('/',async (req, res) => {
+router.get('/',async (_req, res) => {
   try {
-
+    const [result] = await peopleDB.getPeople();
+    res.status(200).json(result)
   }catch(error) {
     console.log(error);
-    res.status(500).json({ message: 'Falha ao listar os usuários' });
+    res.status(500).json({ message: error.sqlMessage });
   }
 })
 
