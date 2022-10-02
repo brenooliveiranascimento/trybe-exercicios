@@ -1,9 +1,9 @@
 const conn = require('./connection');
 
-const put = (person) => conn.execute(
+const insert = (person) => conn.execute(
   `INSERT INTO people
-    (first_name, last_name, email, phone)`,
+    (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)`,
     [person.firstName, person.lastName, person.email, person.phone]
 )
 
-module.exports = put;
+module.exports = {insert};
