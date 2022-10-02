@@ -15,10 +15,25 @@ router.post('/', async (req, res) => {
 
 router.get('/',async (_req, res) => {
   try {
-    const [result] = await peopleDB.getPeople();
+    const [result] = await peopleDB.getPeoplesList();
     res.status(200).json(result)
   }catch(error) {
     console.log(error);
+    res.status(500).json({ message: error.sqlMessage });
+  }
+})
+
+router.get('/:id', async(req, res) => {
+  try {
+    const { id } = req.params;
+    const [[result]] = await peopleDB.findPeopleById(id);
+    if(result) {
+      res.status(200).json(result);
+    } else {
+      res.status(404).json({ message: 'Pessoa não encontrada!' });
+    }
+  }catch(errpr) {
+    console.log(errpr);
     res.status(500).json({ message: error.sqlMessage });
   }
 })

@@ -6,12 +6,12 @@ const insert = (person) => conn.execute(
     [person.firstName, person.lastName, person.email, person.phone]
 )
 
-const getPeople = () => conn.execute(`SELECT * FROM people`)
+const getPeoplesList = () => conn.execute(`SELECT * FROM people`)
 
-const getPeopleById = (id) => conn.execute(`SELECT * FROM people WHERE id = ?`, [id]);
+const findPeopleById = (id) => conn.execute(`SELECT * FROM people WHERE id = ?`, [id]);
 
 module.exports = {
   insert,
-  getPeopleById,
-  getPeople,
+  findPeopleById,
+  getPeoplesList,
 };

@@ -55,7 +55,7 @@ describe('Testando os endpoint de people', function() {
   });
 
   it('Testa a procura de uma pessoa com base no id', async function() {
-    sinon.stub(connection, 'execute').resolves(peopleList[0]);
+    sinon.stub(connection, 'execute').resolves([[peopleList[0]]]);
 
     const response = await chai
       .request(app)
