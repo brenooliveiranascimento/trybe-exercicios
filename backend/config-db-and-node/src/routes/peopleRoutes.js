@@ -42,7 +42,12 @@ router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const person = req.body
-    const [result] = await peopleDB.editPeople(id);
+    const [result] = await peopleDB.editPeople(id, person);
+    if(result.affectedRows > 0) {
+      return res.status(200).json({ personEdited: person, message: 'Pessoa alterada com sucesso!!' })
+    } else {
+      res.status(400).json({ message: 'Usuário não encontrado' });
+    }
     res.status(200).json(result);
   } catch(error) {
     console.log(error);

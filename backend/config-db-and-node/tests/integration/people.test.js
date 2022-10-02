@@ -26,6 +26,16 @@ const peopleList = [
   },
 ];
 
+const editPeople = {
+  personEdited: {
+    firstName: 'Lukão',
+    lastName: 'Andarilho dos ceus',
+    email: 'lukão.skywalker@trybe.com',
+    phone: '851 678 4453',
+  },
+  message: 'Pessoa alterada com sucesso!!'
+}
+
 describe('Testando os endpoint de people', function() {
   it('Testando o cadastro de uma pessoa', async function() {
     sinon.stub(connection, 'execute').resolves([{ insertId: 42 }]);
@@ -79,7 +89,7 @@ describe('Testando os endpoint de people', function() {
       })
 
       expect(response.status).to.be.equal(200)
-      expect(response.body).to.deep.equal({ message: 'Pessoa alterada com sucesso!!' })
+      expect(response.body).to.deep.equal(editPeople)
   })
 
   afterEach(sinon.restore);

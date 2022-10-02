@@ -20,4 +20,5 @@ module.exports = {
   insert,
   findPeopleById,
   getPeoplesList,
+  editPeople,
 };
