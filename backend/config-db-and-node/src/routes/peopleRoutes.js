@@ -13,4 +13,13 @@ router.post('/', async (req, res) => {
   }
 })
 
+router.get('/',async (req, res) => {
+  try {
+
+  }catch(error) {
+    console.log(error);
+    res.status(500).json({ message: 'Falha ao listar os usuários' });
+  }
+})
+
 module.exports = router;
